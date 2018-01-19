@@ -23,6 +23,7 @@ class Opencv < Formula
   depends_on "python3"
   depends_on "numpy"
   depends_on "tbb"
+  depends_on "qt5"
 
   needs :cxx11
 
@@ -52,10 +53,10 @@ class Opencv < Formula
       -DBUILD_JPEG=ON
       -DBUILD_OPENEXR=OFF
       -DBUILD_PERF_TESTS=OFF
-      -DBUILD_PNG=OFF
+      -DBUILD_PNG=ON
       -DBUILD_TESTS=OFF
       -DBUILD_TIFF=OFF
-      -DBUILD_ZLIB=OFF
+      -DBUILD_ZLIB=ON
       -DBUILD_opencv_java=OFF
       -DOPENCV_ENABLE_NONFREE=ON
       -DOPENCV_EXTRA_MODULES_PATH=#{buildpath}/opencv_contrib/modules
@@ -63,14 +64,14 @@ class Opencv < Formula
       -DWITH_CUDA=OFF
       -DWITH_EIGEN=ON
       -DWITH_FFMPEG=ON
-      -DWITH_GPHOTO2=OFF
+      -DWITH_GPHOTO2=ON
       -DWITH_GSTREAMER=OFF
       -DWITH_JASPER=OFF
       -DWITH_OPENEXR=ON
-      -DWITH_OPENGL=OFF
-      -DWITH_QT=OFF
+      -DWITH_OPENGL=ON
+      -DWITH_QT=ON
       -DWITH_TBB=ON
-      -DWITH_VTK=OFF
+      -DWITH_VTK=ON
       -DBUILD_opencv_python2=ON
       -DBUILD_opencv_python3=ON
       -DPYTHON2_EXECUTABLE=#{which "python"}
